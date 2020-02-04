@@ -29,7 +29,7 @@ const CronJob = cron.CronJob
     A cada uma hora reiniciar aplicações com ids definidos
 */
 
-const job = new CronJob( '*/5 * * * * *', () => {
+const job = new CronJob( '0 0 */1 * * *', () => {
     console.log('Preparando para reiniciar api ...', getCurDate());
     pm2.connect( err => {
         if(err) throw err
