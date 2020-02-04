@@ -30,13 +30,13 @@ const CronJob = cron.CronJob
 */
 
 const job = new CronJob( '*/5 * * * * *', () => {
+    console.log('Preparando para reiniciar api ...', getCurDate());
     pm2.connect( err => {
         if(err) throw err
         pm2.restart(1, () => {})
         pm2.restart(2, () => {})
         pm2.restart(3, () => {})
     })
-    console.log('Verificando ...', getCurDate());
 }, null, true, 'America/Manaus')
 
 const getCurDate = () => {
