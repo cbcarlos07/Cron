@@ -26,8 +26,7 @@ const CronJob = cron.CronJob
 
     * * / 1 * * *
     (* / 1) é tudo junto
-    Todos os dias de segunda a sexta às 08:00 da manhã, 
- enviar requisição para verificar se existem ocorrências enviadas que ainda não foram confirmadas
+    A cada uma hora reiniciar aplicações com ids definidos
 */
 
 const job = new CronJob( '*/5 * * * * *', () => {
