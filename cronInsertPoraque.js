@@ -24,7 +24,8 @@ const CronJob = cron.CronJob
     day of week	0-7 (or names, 0 or 7 are sunday)
 
 
-    0 0 8 * * *
+    * * / 1 * * *
+    (* / 1) é tudo junto
     Todos os dias de segunda a sexta às 08:00 da manhã, 
  enviar requisição para verificar se existem ocorrências enviadas que ainda não foram confirmadas
 */
