@@ -36,6 +36,7 @@ const job = new CronJob( '0 0 */1 * * *', () => {
         pm2.restart(1, () => {})
         pm2.restart(2, () => {})
         pm2.restart(3, () => {})
+		pm2.restart(4, () => {})
     })
 }, null, true, 'America/Manaus')
 
